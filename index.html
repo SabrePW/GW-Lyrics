@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174d8c">
+  <meta name="description" content="Mobile-friendly song lyrics for GW Guitar Workshop.">
+  <title>GW Lyrics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to lyrics</a>
+
+  <header class="app-bar">
+    <div class="app-bar__inner">
+      <button class="brand" id="homeButton" type="button" aria-label="Go to welcome page">
+        <img class="brand__mark" src="images/gw-logo-curved.svg" alt="">
+        <span class="brand__name">Lyrics</span>
+      </button>
+
+      <label class="song-picker">
+        <span class="sr-only">Choose a song</span>
+        <select id="songSelect" aria-label="Choose a song">
+          <option value="home">Choose a song…</option>
+        </select>
+      </label>
+
+      <div class="controls" aria-label="Reading controls">
+        <button id="fontDown" type="button" aria-label="Decrease lyric size">A−</button>
+        <button id="fontUp" type="button" aria-label="Increase lyric size">A+</button>
+        <button id="themeToggle" class="icon-button" type="button" aria-label="Use dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="watermark" aria-hidden="true">
+    <img src="images/gw-watermark.svg" alt="">
+  </div>
+
+  <main id="main">
+    <section class="landing" id="homeView" aria-labelledby="welcomeTitle">
+      <div class="poster-card">
+        <img src="images/landing-poster.png" alt="National Day 2026 poster featuring Singapore landmarks and the Red Lions" id="posterImage">
+        <img class="event-logo" src="images/ndp-61-logo.jpg" alt="NDP 61 - Majulah Singapura, Go Beyond!">
+        <img class="poster-logo" src="images/gw-logo-curved.svg" alt="GW">
+        <div class="poster-title">
+          <h1 id="welcomeTitle">Song Lyrics</h1>
+          <p lang="zh-Hans">歌曲歌词</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="song-view" id="songView" aria-label="All songs">
+      <div class="song-list" id="songList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Let everything that has breath praise the Lord : Psa 150:6</span>
+  </footer>
+</body>
+</html>
